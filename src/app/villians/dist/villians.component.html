@@ -1,0 +1,18 @@
+<h2>My Villians</h2>
+<ul class="villians">
+  <li *ngFor="let villian of villians">
+    <button [class.selected]="villian === selectedVillian" type="button" (click)="onSelect(villian)">
+      <span class="badge">{{villian.id}}</span>
+      <span class="name">{{villian.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedVillian">
+  <h2>{{selectedVillian.name | uppercase}} Details</h2>
+  <div>id: {{selectedVillian.id}}</div>
+  <div>
+    <label for="villian-name">Villian name: </label>
+    <input id="villian-name" [(ngModel)]="selectedVillian.name" placeholder="name">
+  </div>
+</div>

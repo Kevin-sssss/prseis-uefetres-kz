@@ -1,0 +1,1 @@
+{"version":3,"sources":["hero.ts"],"names":[],"mappings":"","file":"hero.js","sourcesContent":["export interface Hero {\r\n    id: number;\r\n    name: string;\r\n  }"]}
